@@ -1,6 +1,8 @@
 FROM ubuntu:18.04 as builder
 
-LABEL author="Mirko Hering <mirko@jmhering.net>"
+LABEL author="Mirko Hering <mirko@jmhering.net>" \
+      org.label-schema.name="IRSTLM" \
+      org.label-schema.vcs-url="https://github.com/clu-pei-dae/docker-irstlm"
 
 RUN apt-get update \
     && apt-get install -y build-essential git cmake libtool libc-dev gcc zlib1g-dev sphinxbase-utils\
