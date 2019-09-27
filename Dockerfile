@@ -3,7 +3,7 @@ FROM ubuntu:18.04 as builder
 LABEL author="Mirko Hering <mirko@jmhering.net>"
 
 RUN apt-get update \
-    && apt-get install -y build-essential git cmake libtool libc-dev gcc zlib1g-dev\
+    && apt-get install -y build-essential git cmake libtool libc-dev gcc zlib1g-dev sphinxbase-utils\
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /build/ /opt/irstlm \
@@ -25,4 +25,6 @@ RUN apt-get update \
 
 COPY --from=builder /opt/irstlm /opt/irstlm
 
-ENTRYPOINT [ "/opt/irstlm/bin/wrapper" ]
+ENV IRSTLM "/opt/irstlm"
+
+CMD [ "/opt/irstlm/bin/wrapper" ]
