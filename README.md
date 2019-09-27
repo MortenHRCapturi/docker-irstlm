@@ -1,5 +1,8 @@
 # docker-irstlm
 
+[![](https://images.microbadger.com/badges/version/clupeidae/irstlm.svg)](https://microbadger.com/images/clupeidae/irstlm "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/clupeidae/irstlm.svg)](https://microbadger.com/images/clupeidae/irstlm "Get your own image badge on microbadger.com")
+
 This Dockerfile builds the [irstlm github repository](https://github.com/irstlm-team/irstlm) and delivers the binaries in the resulting image.
 
 ## Run irstlm tools
